@@ -1,3 +1,7 @@
+title1 = "WK2 Challenges I, Part 3"
+title1 = title1.upper()
+
+input(title1)
 
 total = 0
 for num in range(21):
@@ -11,25 +15,68 @@ for num in range(21):
     total = total + num
     print(total)
 
+print(" ")
 
-num1 = int(input("Pick a number. Any number."))
-num2 = int(input("Pick another number. Again, any number will do."))
-num3 = int(input("Pick a third number."))
-num4 = int(input("Pick a fourth number."))
+###############################################
+
+title2 = "WK2 Challenges I, Part 4"
+title2 = title2.upper()
+
+input(title2)
+
+num1 = int(input("Pick a number. Any number. "))
+num2 = int(input("Pick another number. Again, any number will do. "))
+num3 = int(input("Pick a third number. "))
+num4 = int(input("Pick a fourth number. "))
+##ADD PRECISION TO FLOAT INSTEAD
 
 numbers = [num1, num2, num3, num4]
 numbers.sort()
 # numbers = numbers.sort() is incorrect. Why, though?
-## list_name.sort(reverse=True) --> sort the given list in descending order
 
-# list_name.sort(key=…, reverse=…) – it sorts according to user’s choice. Parameters:
-    # reverse: reverse=True will sort the list descending. Default is reverse=False
-    # key: A function to specify the sorting criteria(s)
 max = numbers[3]
 min = numbers[0]
 
 print(f"Your max number is {max}.")
 print(f"Your min number is {min}.")
+
+print(" ")
+
+## list_name.sort(reverse=True) --> sort the given list in descending order
+
+# list_name.sort(key=…, reverse=…) --> sorts according to user’s choice. Parameters:
+    # reverse: reverse=True will sort the list descending. Default is reverse=False
+    # key: A function to specify the sorting criteria(s)
+
+###########################################################
+title3 = "WK2 Challenges I, Part 5"
+title3 = title3.upper()
+
+input(title3)
+
+import operator
+num1 = int(input("Pick a number. Any number. "))
+num2 = int(input("Pick another number. Again, any number will do. "))
+##ADD PRECISION TO FLOAT INSTEAD
+total = operator.add(num1,num2)
+
+print(f"Your total is {total}.")
+
+#I TRIED ALL  OF THESE:
+# numbers = [num1,num2]
+# numbers.add(numbers)
+# total = sum(num1,num2)
+# total = sum(num1:int,num2:int)
+# print(numbers)
+
+# total = num1 + num2--> works, but doesn't use .add()
+
+
+
+
+
+
+
 
 # for every num in numbers:
 #   if 
