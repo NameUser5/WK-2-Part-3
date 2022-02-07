@@ -72,7 +72,7 @@ numbers = [num1, num2, num3, num4]
 numbers.sort()
 # numbers = numbers.sort() is incorrect. Why, though?
 
-max = numbers[3]
+max = numbers[-1]
 min = numbers[0]
 
 print(f"Your max number is {max}.")
