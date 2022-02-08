@@ -1,7 +1,7 @@
-title1 = "WK2 Challenges I, Part 3"
+title1 = "WK2 Challenges I, Part 3\n"
 title1 = title1.upper()
 
-input(title1)
+print(title1)
 
 total = 0
 for num in range(21):
@@ -15,53 +15,62 @@ for num in range(21):
     total = total + num
     print(total) # Wanted to see how the 'for' loop works.
 
-print(" ")
 
-import operator
+def addition(total, num):
+  total = total + num
+  return total
+
 
 numbers = range(0,21)
 for num in numbers:
   if num <0:
     if num >= 20:
-      total = operator.add(total, num)
+      total = addition(total, num)
   
 print(total)
 
-# My initial attempts (some are not as intuitive; clunky):
+# ## Other attempts:
+# import operator
 
-twenty = [x for x in range(21) if x % 1 == 0]
-print(twenty)
-sum_20 = sum(twenty)
-print(sum_20)
+# numbers = range(0,21)
+# for num in numbers:
+#   if num <0:
+#     if num >= 20:
+#       total = operator.add(total, num)
 
-rnge = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-rngesum = sum(rnge)
-print(rnge)
-print(rngesum)
+# twenty = [x for x in range(21) if x % 1 == 0]
+# print(twenty)
+# sum_20 = sum(twenty)
+# print(sum_20)
 
-rnge2 = []
-for x in range(50):
-  if x > 0:
-    if x < 21:
-      rnge2.append(x) 
-print(rnge2)
-sum_rnge2 = sum(rnge2)
-print(sum_rnge2)
+# rnge = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# rngesum = sum(rnge)
+# print(rnge)
+# print(rngesum)
 
-#Did this to see what .append really does:
-rnge3 = []
-for x in range(50):
-  if x > 0:
-    if x < 21:
-      rnge3.append(x) # So .append is a "collector" of sorts?
-print(rnge3)
+# rnge2 = []
+# for x in range(50):
+#   if x > 0:
+#     if x < 21:
+#       rnge2.append(x) 
+# print(rnge2)
+# sum_rnge2 = sum(rnge2)
+# print(sum_rnge2)
+
+# #Did this to see what .append really does:
+# rnge3 = []
+# for x in range(50):
+#   if x > 0:
+#     if x < 21:
+#       rnge3.append(x) # So .append is a "collector" of sorts?
+# print(rnge3)
 
 ###############################################
 
-title2 = "WK2 Challenges I, Part 4"
+title2 = "\nWK2 Challenges I, Part 4"
 title2 = title2.upper()
 
-input(title2)
+print(title2)
 
 num1 = int(input("Pick a number. Any number. "))
 num2 = int(input("Pick another number. Again, any number will do. "))
@@ -70,15 +79,13 @@ num4 = int(input("Pick a fourth number. "))
 
 numbers = [num1, num2, num3, num4]
 numbers.sort()
-# numbers = numbers.sort() is incorrect. Why, though?
+# numbers = numbers.sort() is incorrect. Why, though? --> numbers.sort() is a function. It cannot be equated to a variable
 
-max = numbers[-1]
+max = numbers[-1] #foolproof way to get the max, no matter how many numbers you ask for.
 min = numbers[0]
 
-print(f"Your max number is {max}.")
-print(f"Your min number is {min}.")
-
-print(" ")
+print(f"\nYour max number is {max}.")
+print(f"Your min number is {min}.\n")
 
 ## list_name.sort(reverse=True) --> sort the given list in descending order
 
@@ -87,17 +94,20 @@ print(" ")
     # key: A function to specify the sorting criteria(s)
 
 ###########################################################
-title3 = "WK2 Challenges I, Part 5"
+title3 = "\nWK2 Challenges I, Part 5"
 title3 = title3.upper()
 
-input(title3)
+print(title3)
 
-import operator
-num1 = float(input("Pick a number. Any number. "))
+def add(num1,num2):
+  total = num1 + num2
+  return total
+
+num1 = float(input("\nPick a number. Any number. "))
 num2 = float(input("Pick another number. Again, any number will do. "))
-total = round(operator.add(num1,num2))
+total = round(add(num1,num2))
 
-print(f"Your total is {total}.")
+print(f"\nYour total is {total}.")
 
 #I TRIED ALL  OF THESE:
 # numbers = [num1,num2]
